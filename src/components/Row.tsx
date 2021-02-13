@@ -22,13 +22,10 @@ type Movie = {
 export const Row = ({ title, fetchUrl, isLargeRow }: Props) => {
 	const [movies, setMovies] = useState<Movie[]>([]);
 
-	console.log(isLargeRow);
-
 	useEffect(() => {
 		async function fetchData() {
 			const request = await axios.get(fetchUrl);
 			setMovies(request.data.results);
-			return request;
 		}
 		fetchData();
 	}, [fetchUrl]); //fetchUrlが変わるたびに、fetchData()を非同期で実行する
