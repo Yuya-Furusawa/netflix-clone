@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import YouTube from "react-youtube";
 
 import axios from "./../axios";
-import { API_KEY } from "./../apikey";
 import "./Row.css";
 
 const base_url = "https://image.tmdb.org/t/p/original";
