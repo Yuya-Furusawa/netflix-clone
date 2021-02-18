@@ -7,8 +7,7 @@ import "./Row.css";
 const base_url = "https://image.tmdb.org/t/p/original";
 
 // API_KEYの取得
-require('dotenv').config();
-const API_KEY = process.env.API_KEY;
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 type Props = {
 	title: string;
