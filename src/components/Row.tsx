@@ -55,7 +55,7 @@ export const Row = ({ title, fetchUrl, isLargeRow }: Props) => {
 
 	const handleClick = async (movie: Movie) => {
 		if (trailerUrl) {
-			setTrailerUrl(""); //画面にすでに表示されているときは`trailerUrl`を空にする
+			setTrailerUrl(""); //画面にすでに表示されているときは`trailerUrl`を空にする（=トレーラー映像を削除する）
 		} else {
 			let trailerurl = await axios.get(
 				`/tv/${movie.id}/videos?api_key=${API_KEY}`

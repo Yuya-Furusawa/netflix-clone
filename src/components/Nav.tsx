@@ -18,6 +18,7 @@ export const Nav = () => {
 		window.addEventListener("scroll", handleShow);
 		return () => {
 			//クリーンアップ関数
+			//仕掛けの解除
 			window.removeEventListener("scroll", handleShow);
 		};
 	}, []);
